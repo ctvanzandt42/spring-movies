@@ -1,27 +1,21 @@
 package com.theironyard.springmovies;
 
+import java.util.List;
+
 public class ResultsPage {
-    private Object results;
+    private List<Movie> results;
     private int page;
     private int total_results;
     private Object  dates;
     private int total_pages;
 
-    public ResultsPage(Object results, int page, int total_results, Object dates, int total_pages) {
-        this.results = results;
-        this.page = page;
-        this.total_results = total_results;
-        this.dates = dates;
-        this.total_pages = total_pages;
-    }
-
     public ResultsPage(){}
 
-    public Object getResults() {
+    public List<Movie> getResults() {
         return results;
     }
 
-    public void setResults(Object results) {
+    public void setResults(List<Movie> results) {
         this.results = results;
     }
 

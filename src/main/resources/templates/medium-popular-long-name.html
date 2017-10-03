@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <title>Medium Popular with a Long Name</title>
 </head>
 <body>
-<h1>Hipster Movies!</h1>
-
-<p>All systems are a go!</p>
+<h1>Semi-Popular Movies with 10 characters or more in the title!</h1>
+<div th:each="movie : ${movies}">
+    <img width="150px" th:src="${movie.posterPath}"/>
+    <br/>
+    <span th:text="${movie.title}"></span>
+</div>
 <p><a href="/">Back home!</a></p>
+<p><a href="/now-playing">Back to all movies!</a></p>
+
 
 </body>
 </html>
